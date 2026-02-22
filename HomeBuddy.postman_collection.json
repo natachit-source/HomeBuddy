@@ -1,0 +1,119 @@
+{
+  "info": {
+    "_postman_id": "38be57ff-258c-4f4d-a7e8-d86a51f660f1",
+    "name": "HomeBuddy",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "14284889",
+    "_collection_link": "https://go.postman.co/collection/14284889-38be57ff-258c-4f4d-a7e8-d86a51f660f1?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "UI allows the User proceeding to the next step, even if AP - \"Invalid budget enum value\"",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json, text/plain, */*",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Origin",
+            "value": "https://hb-test.stage.sirenltd.dev",
+            "type": "text"
+          },
+          {
+            "key": "Referer",
+            "value": "https://hb-test.stage.sirenltd.dev",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"budget\": \"2\",\r\n  \"trustedFormUrl\": \"https://cert.trustedform.com/2cae4e607613722dcf2ad751a0b802be51cf9d03\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://api-test.stage.sirenltd.dev/v1/public/leads/ba333d2e-879d-4944-8bfc-bf3b638570d1",
+          "protocol": "https",
+          "host": [
+            "api-test",
+            "stage",
+            "sirenltd",
+            "dev"
+          ],
+          "path": [
+            "v1",
+            "public",
+            "leads",
+            "ba333d2e-879d-4944-8bfc-bf3b638570d1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "404 - {\"error\":\"Not Found.\"}",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Origin",
+            "value": "https://hb-test.stage.sirenltd.dev",
+            "type": "text"
+          },
+          {
+            "key": "",
+            "value": "",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"layout\": [\"walls\"],\r\n  \"trustedFormUrl\": \"https://cert.trustedform.com/c5db7f5ae83ed4daf42e17b9ee70364f9f08f06a\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://api-test.stage.sirenltd.dev/v1/public/leads/non-existent-uuid",
+          "protocol": "https",
+          "host": [
+            "api-test",
+            "stage",
+            "sirenltd",
+            "dev"
+          ],
+          "path": [
+            "v1",
+            "public",
+            "leads",
+            "non-existent-uuid"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
